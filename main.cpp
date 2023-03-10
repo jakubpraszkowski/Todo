@@ -20,7 +20,7 @@ int main() {
     std::cout << "Enter priority (1-5): ";
     std::cin >> priority;
 
-    Task task1(name, "", "", 0);
+    Task task1(name, desc, due_date, priority);
     tasks.push_back(task1);
 
     Task task2;
@@ -28,8 +28,11 @@ int main() {
 
     List list1(tasks);
     list1.show_tasks();
-    list1.delete_task();
-    list1.show_tasks();
+//    list1.delete_task();
+//    list1.show_tasks();
+    list1.mark_task();
+    list1.show_marked_tasks();
+
 
 
     return 0;

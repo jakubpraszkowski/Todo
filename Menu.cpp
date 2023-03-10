@@ -3,3 +3,8 @@
 //
 
 #include "Menu.h"
+
+void Menu::user_menu() {
+    char what = '\0';
+
+}

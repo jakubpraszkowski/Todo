@@ -39,8 +39,8 @@ public:
     void setPriority(unsigned int priority);
 
     void edit_task(std::string task, std::string desc, std::string date, unsigned prior);
-    void mark_task();
     void print_task() const;
+    void print_done_task() const;
 };
 
 

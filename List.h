@@ -10,12 +10,16 @@
 
 class List {
     std::vector<Task> tasks;
+    std::vector<Task> done_tasks;
 
 public:
     List(const std::vector<Task> &tasks);
 
     void show_tasks();
     void delete_task();
+    void mark_task();
+    void show_marked_tasks();
+    void check_vector(short i);
 };
 
 

@@ -18,10 +18,6 @@ void Task::edit_task(std::string task, std::string desc, std::string date, unsig
     this->priority = prior;
 }
 
-
-void Task::mark_task() {}
-
-
 void Task::print_task() const {
     std::cout << "Task Name: " << getTaskName() << "\n";
     std::cout << "Description: " << getDescription() << "\n";
@@ -60,4 +56,11 @@ unsigned int Task::getPriority() const {
 
 void Task::setPriority(unsigned int prio) {
     Task::priority = prio;
+}
+
+void Task::print_done_task() const {
+    std::cout << "\x1B[9m" << "Task Name: "  << getTaskName() << "\x1B[0m" << "\n";
+    std::cout << "\x1B[9m" << "Description: "  << getDescription() << "\x1B[0m" << "\n";
+    std::cout << "\x1B[9m" << "Due Date: " << getDueDate() << "\x1B[0m" << "\n";
+    std::cout << "\x1B[9m" << "Priority: " << getPriority() << "\x1B[0m" << "\n\n";
 }
