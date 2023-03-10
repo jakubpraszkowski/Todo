@@ -3,6 +3,7 @@
 //
 #include <string>
 #include <utility>
+#include <iostream>
 
 #ifndef TO_DO_TASK_H
 #define TO_DO_TASK_H
@@ -14,10 +15,11 @@ class Task {
 public:
     Task(std::string taskName, std::string description, std::string dueDate,
          unsigned int priority);
+    Task(){};
 
 private:
     std::string due_date;
-    unsigned priority;
+    unsigned priority{};
 
 public:
     const std::string &getTaskName() const;
@@ -36,10 +38,9 @@ public:
 
     void setPriority(unsigned int priority);
 
-    void add_task(std::string task_name, std::string description, std::string due_date, unsigned priority);
     void edit_task(std::string task, std::string desc, std::string date, unsigned prior);
     void mark_task();
-    void show_tasks();
+    void print_task() const;
 };
 
 

@@ -6,7 +6,7 @@
 #include <string>
 
 int main() {
-    auto* tasks =  new std::vector<Task>;
+    std::vector<Task> tasks;
 
     std::string name, desc, due_date;
     unsigned priority;
@@ -20,15 +20,17 @@ int main() {
     std::cout << "Enter priority (1-5): ";
     std::cin >> priority;
 
-    Task task1("", "", "", 0);
-    task1.add_task(name, desc, due_date, priority);
-    tasks->push_back(task1);
+    Task task1(name, "", "", 0);
+    tasks.push_back(task1);
 
-    List list1(*tasks);
+    Task task2;
+    tasks.push_back(task2);
+
+    List list1(tasks);
+    list1.show_tasks();
+    list1.delete_task();
     list1.show_tasks();
 
-
-    delete tasks;
 
     return 0;
 }
